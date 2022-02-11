@@ -12,34 +12,34 @@ window.onload = async function () {
   allTasks = result.data;
   render();
 }
-//
-// const onClickButton = async () => {
-//   allTasks.push({
-//     text: valueInput,
-//     isCheck: false,
-//     isVisibleEditInput: false,
-//     textInput: ""
-//   });
-//   const response = await fetch("http://localhost:8000/createTask", {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json;charset=utf-8",
-//       "Access-Control-Allow-Origin": "*"
-//     },
-//     body: JSON.stringify({
-//       text: valueInput,
-//       isCheck: false,
-//       isVisibleEditInput: false,
-//       textInput: ""
-//     })
-//   });
-//   let result = await response.json();
-//   allTasks = result.data;
-//
-//   localStorage.setItem("tasks", JSON.stringify(allTasks));
-//   input.value = "";
-//   render();
-// }
+
+const onClickButton = async () => {
+  allTasks.push({
+    text: valueInput,
+    isCheck: false,
+    isVisibleEditInput: false,
+    textInput: ""
+  });
+  const response = await fetch("http://localhost:8000/createTask", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json;charset=utf-8",
+      "Access-Control-Allow-Origin": "*"
+    },
+    body: JSON.stringify({
+      text: valueInput,
+      isCheck: false,
+      isVisibleEditInput: false,
+      textInput: ""
+    })
+  });
+  let result = await response.json();
+  allTasks = result.data;
+
+  localStorage.setItem("tasks", JSON.stringify(allTasks));
+  input.value = "";
+  render();
+}
 
 const onClickDeleteContainer = () => {
   const content = document.getElementById('content-page');
