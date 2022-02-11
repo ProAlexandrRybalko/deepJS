@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDoList</title>
+    <link rel="stylesheet" type="text/css" href="styleToDoList.css">
+</head>
+<body>
+    <div class="main">
+        <h1>To Do List</h1>
+        <div class="input-button">
+            <label>
+                Введите задание: <input id="input" type="text" size="50">
+            </label>
+            <button onclick="onClickButton()">Add to list</button>
+        </div>
+        <button onclick="onClickDeleteContainer()">Очистить контейнер</button>
+        <div id="content-page"></div>
+    </div>
+
+    <script src="scriptToDoList.js"></script>
+</body>
+</html>
