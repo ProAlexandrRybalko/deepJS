@@ -2,6 +2,8 @@ let allTasks = JSON.parse(localStorage.getItem('tasks')) || [];
 let valueInput = "";
 let input = null;
 
+////////////////
+
 window.onload = async function () {
   input = document.getElementById("input");
   input.addEventListener('change', updateValue);
